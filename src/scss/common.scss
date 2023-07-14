@@ -1,0 +1,196 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+//========================================================================================================================================================
+
+.button {
+	position: relative;
+	display: flex;
+	padding: 16px 20px;
+	border-radius: 5px;
+	background-color: #5C62EC;
+	font-family: 'DM Sans';
+	font-size: rem(16);
+	font-style: normal;
+	font-weight: 500;
+	line-height: 100%;
+	justify-content: center;
+	gap: rem(10);
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #3C40AE;
+		}
+	}
+	// span{
+	// 	&::after{
+	// 		content: '';
+	// 		position: absolute;
+	// 		top: 35%;
+	// 		right: 40%;
+	// 		height: rem(14);
+	// 		width: rem(14);
+	// 		background: url("../img/arrow-right.svg") 0 0 no-repeat;
+	// 	}
+	// }
+	// .button_border
+	&_border {
+		background-color: transparent;
+		border: 1px solid #fff;
+		position: relative;
+		padding: 16px 20px 16px 48px;
+		font-weight: 500;
+		line-height: 100%;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 30%;
+			left: rem(20);
+			height: rem(20);
+			width: rem(20);
+			background: url("../img/download.svg") 0 0 no-repeat;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+				color: #A0A0A1;
+				border: 1px solid #A0A0A1;
+				&::before{
+					background: url("../img/download_h.svg") 0 0 no-repeat;
+				}
+				
+			}
+		}
+	}
+	// .button_border
+	&_arrow {
+		background-color: transparent;
+		border: 1px solid #fff;
+		position: relative;
+		padding: 16px 44px 16px 20px;
+		font-weight: 500;
+		line-height: 100%;
+		&::after{
+			content: '';
+			position: absolute;
+			top: 35%;
+			right: rem(20);
+			height: rem(14);
+			width: rem(14);
+			background: url("../img/arrow-right.svg") 0 0 no-repeat;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+				color: #A0A0A1;
+				border: 1px solid #A0A0A1;
+				&::after{
+					background: url("../img/arrow-right_h.svg") 0 0 no-repeat;
+				}
+				
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+.body{
+	padding: rem(24);
+	background: #1C1E22;
+	display: flex;
+	gap: rem(32);
+	border-radius: 8px;
+	border: 1.5px solid #26292D;
+	@media (max-width:$mobile){
+		 flex-direction: column; 
+		 gap: rem(24);
+		 padding: 0;
+	}
+	&_big{
+		background: none;
+		gap: rem(140);
+		border: none;
+		@media (max-width:$tablet){
+			
+			gap: rem(40)
+		}
+	}
+// .body__image-ibg
+&__image {
+	flex: 0 0 35.6%;
+	// padding-bottom: 44.2%;
+	border-radius: 8px;
+	img{
+		width: 100%;
+	}
+	@media (max-width:$mobile){
+		align-self: center;
+		flex: 0 0 100%;
+	}
+	&_big{
+		flex: 0 0 39.5%;
+	}
+}
+// .body__content
+&__content {
+	flex: 1 1 auto;
+}
+// .body__title
+&__title {
+	margin-bottom: rem(32);
+			@media (max-width:$mobile){
+				margin-bottom: rem(16); 
+			}
+}
+// .body__text
+&__text {
+	font-weight: 400;
+	line-height: 175%;
+	letter-spacing: 0.44px;
+	margin-bottom: rem(24);
+	p{
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+		}
+	}
+	@media (max-width:$mobile){
+		margin-bottom: rem(16);
+	}
+}
+// .body__button
+&__button {
+	max-width: rem(200);
+}
+// .body__mail
+&__mail{
+	color: $blueColor;
+	@media (any-hover: hover){
+		&:hover{
+			color: #3C40AE;
+		}
+	}
+}
+}
+//========================================================================================================================================================
+.title{
+		font-size: rem(48);
+		line-height: math.div(57, 48);
+		font-weight: 500;
+		span{
+			color: $blueColor;
+		}
+		@media (max-width:$mobile){
+			font-size: rem(24);
+			font-weight: 400;
+			line-height: math.div(32, 24);
+		}
+		&_big{
+			font-size: rem(60);
+			font-weight: 700;
+			line-height: math.div( 71, 60);
+			letter-spacing: -0.5px;
+			@media (max-width:$mobile){
+				font-size: rem(34);
+				font-weight: 500;
+				line-height: math.div( 40, 34);
+				letter-spacing: 0.25px; 
+			}
+		}
+}

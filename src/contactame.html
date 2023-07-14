@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Contáctame"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="page__contacts contacts">
+					<div class="contacts__container">
+							<div class="contacts__title title_big">¡Hablemos!</div>
+							<div class="contacts__text">Si estás interesado en mi trabajo o tienes alguna inquietud, no dudes en escribirme!</div>
+							<div class="contacts__content">
+								<form action="#" class="contacts__form form">
+									<div class="form__item">
+										<label for="formPhone" class="form__label">Tu nombre</label>
+										<input id="formPhone" autocomplete="off" type="tel" name="form[]" data-error="Error" data-required placeholder="Nombre" class="form__input input">
+									</div>
+									<div class="form__item">
+										<label for="formEmail" class="form__label">Tu E-mail</label>
+										<input id="formEmail" autocomplete="off" type="text" name="form[]" data-error="Error" data-required="email" placeholder="Ejemplo@hotmail.com" class="form__input input">
+									</div>
+									<div class="form__item">
+										<label for="formMessage" class="form__label">Tu mensaje</label>
+										<textarea id="formMessage" autocomplete="off" name="form[]" placeholder="Hey..." data-error="Error" class="form__input input"></textarea>
+									</div>
+									<div class="form__item">
+										<button type="submit" class="form__button button">Enviar</button>
+									</div>
+								</form>
+								
+							</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
